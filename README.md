@@ -1,12 +1,22 @@
 # MITID-bootcamp
-Everything you need for MITID bootcamp!
+Welcome to the README for the Intermediate Bootcamp designed for M.I.T.i.d students.
+This page gathers all the essential information you may need in case you forget something.
+Before we begin, here is an overview of the technical components and tools we will be using throughout these three days.
+
+![image of technic stack](assets/repo-stack.png)
+
+### 🙋🏻‍♂️ Remind me what a library is
+
+>In programming, a library is **a collection of pre-written code that provides specific tools or functions you can use in your own projects**. Instead of writing everything from scratch, you can use a library to handle tasks such as drawing graphics, working with sound, or managing user interactions—saving time and allowing you to focus on creativity and design.
+
 
 ## Table of content
 
 - [How to use this repo](#how-to-use-this-repo)
+- [P5.js reminders](#p5js)
 - [Johnny five → J5.js](#johnny-five)
   * [Firmata](#firmata)
-  * [Add johnny five to your P5.js sketch](#p5js)
+  * [Add johnny five to your P5.js sketch](#add-j5js-in-your-p5js-sketch)
   * [Components documentation](#johnny-five-documentation-for-almost-each-components-from-your-kit)
 - [ML5.js](#)
   * [Add bodyPose to your P5.js sketch](#bodypose)
@@ -14,7 +24,17 @@ Everything you need for MITID bootcamp!
 
 ## How to use this repo
 
-For each new sketch you want to create, duplicate the `sketch` folder.
+>[!CAUTION]
+>For each new sketch you want to create, duplicate the `sketch` folder and rename your copy.
+
+## P5.js
+
+p5.js is a JavaScript library designed to make coding accessible for artists, designers, educators, and beginners. It provides an easy and creative way to draw shapes, create animations, and build interactive visuals directly in a web browser. Built on top of standard JavaScript, **p5.js simplifies complex coding concepts and focuses on visual and interactive design**.
+
+>[!TIP]
+>Have a look at the [P5.js library documentation↗](https://p5js.org/reference/)
+
+
 
 ## johnny five
 
@@ -36,7 +56,7 @@ Keep in mind:
 - Leave the board plugged to your computer when you want to use it. 
 - Make sure to unplug the board when you create a circuit.
 
-### P5.js
+### Add J5.js in your P5.js sketch
 
  minimal sketch to switch on a led
 
@@ -97,6 +117,8 @@ Components available in the makers'lab
 - [Motion sensor↗](https://johnny-five.io/api/motion/)
 
 ## ML5.js
+
+BodyPose documentation on ml5.js website : [https://docs.ml5js.org/#/reference/bodypose↗](https://docs.ml5js.org/#/reference/bodypose)
 
 ### BodyPose
 
