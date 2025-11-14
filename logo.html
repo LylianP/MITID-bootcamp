@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 2834 3400">
+        <g id="logo">
+            <polygon points="1633.33,758.47 1648.78,725.29 1817.83,725.22 1817.85,758.4   "/>
+            <path d="M1089.1,1311.52h-25.99L1331.5,734.8c2.72-5.84,8.57-9.58,15.01-9.58h235.67c12.11,0,20.12,12.6,15.01,23.6l-117.83,253.2    c-2.72,5.84-8.57,9.58-15.01,9.58h-184.47l15.44-33.18h158.48l102.4-220.02h-199.13l-252.94,543.54    C1101.39,1307.78,1095.54,1311.52,1089.1,1311.52z"/>
+            <path d="M1162.04,1011.61H849.3l238.82-513.41c2.72-5.84,8.57-9.58,15.01-9.58h25.98L901.26,978.43h276.22L1162.04,1011.61z"/>
+            <path d="M1629.9,678.51h-36.53l83.92-180.32c2.72-5.84,8.57-9.58,15.01-9.58h25.99L1629.9,678.51z"/>
+            <path d="M1700,1011.61h-25.99l238.93-513.42c2.72-5.84,8.57-9.58,15.01-9.58h25.99l-238.93,513.42    C1712.29,1007.87,1706.44,1011.61,1700,1011.61z"/>
+        </g>
+    </svg>
+</body>
+<script>
+    const array = n => new Array(n).fill(0).map((_, i) => i);
+    const map = (value, in_min, in_max, out_min, out_max) => (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+
+    let svg = document.querySelector('svg')
+    let logo = document.querySelector('#logo')
+    let pow = 1.6
+    svg.innerHTML = `${array(20).map(j => `<g transform="translate(${0}, 0)">
+        ${array(50).map(i => `<g transform="translate(1000, 0) scale(${map(i, 0, 50, .01, .1)}) translate(${i*j*map(j, 0, 20, -50, 50)}, ${i**pow * 50})">${logo.innerHTML}</g>`).join('')}
+    </g>`).join('')}`
+
+</script>
+</html>
